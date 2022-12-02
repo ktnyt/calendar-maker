@@ -65,7 +65,7 @@ const Calendar: Component<CalendarProps> = (props) => {
   return (
     <div
       ref={(el) => setRef(el)}
-      class="w-[2240px] h-[720px] flex flex-col divide-y divide-slate-200 bg-white"
+      class="w-[2240px] h-[800px] flex flex-col divide-y divide-slate-200 bg-white"
     >
       <For each={dates}>
         {(week) => (
@@ -83,7 +83,7 @@ const Calendar: Component<CalendarProps> = (props) => {
                 const dateStr = `${month}/${day}`;
                 const dayStr = DAYS_JP[date.getDay()];
                 return (
-                  <div class="w-[320px] h-[360px] text-center font-bold proportional-nums">
+                  <div class="w-[320px] h-[400px] text-center font-bold proportional-nums">
                     <Switch fallback={<span>{`${dateStr}（${dayStr}）`}</span>}>
                       <Match when={date.getDay() === 0 || isHoliday}>
                         <span class="text-red-600">{`${dateStr}（${dayStr}）`}</span>
